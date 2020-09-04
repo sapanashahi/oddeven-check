@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+</head>
+<body>
+    <label>enter number</label><br>
+    <input type="number" id="number" name=" ">
+<button id="btn" onclick="getnumber()"><i id="i1" style="visibility:hidden;" class="fa fa-spin fa-spinner fa-fw "></i>check</button>
+    <p id="result"  ></p>
+    <script>
+    function checknumber()
+    {
+        var number=Number(document.getElementById('number').value);
+        if(number%2===0)
+        {
+            document.getElementById("result").innerHTML=`number ${number} is even`;
+            document.getElementById("i1").style.visibility="hidden";
+            console.log("hello");
+        }
+        else
+        {
+            document.getElementById("result").innerHTML=`number ${number} is odd`;
+            document.getElementById("i1").style.visibility="hidden";
+        
+         }
+     }
+     function getnumber()
+     {
+            document.getElementById("i1").style.visibility="visible";
+        
+            setInterval(checknumber,3000);
+        }
+      </script>
+</body>
+</html>
